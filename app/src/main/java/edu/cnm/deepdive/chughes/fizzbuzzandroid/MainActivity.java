@@ -6,6 +6,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements TextWatcher {
 
@@ -48,6 +49,10 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
 
     @Override
     public void afterTextChanged(Editable editable) {
-        updateText(Integer.parseInt(editable.toString()));
+        try {
+            updateText(Integer.parseInt(editable.toString()));
+        } catch (NumberFormatException e){
+            Toast.makeText(this,"Invalid Input",Toast.LENGTH_LONG).show();
+        }
     }
 }
