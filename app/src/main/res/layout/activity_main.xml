@@ -8,17 +8,23 @@
         android:layout_height="match_parent"
         tools:context="edu.cnm.deepdive.chughes.fizzbuzzandroid.MainActivity">
 
-    <EditText
+    <Button
+            android:id="@+id/button_fizzbuzz"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/editText"/>
+            android:text="FizzBuzz"
+            android:onClick="showFizzBuzz"/>
 
-    <TextView
-            android:id="@+id/fizzbuzztext"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Hello World!"/>
+    <Button
+            android:id="@+id/button_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Second"
+            android:onClick="showSecond"/>
+
+<FrameLayout android:id="@+id/fragment"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          />
 
 </LinearLayout>
